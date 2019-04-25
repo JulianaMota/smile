@@ -6,9 +6,45 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
   </head>
+  <style>
+    #rEye {
+      animation: blink 2s ease-out infinite;
+    }
+    #lEye{
+      animation: blink 2s ease-out infinite;
+    }
+    @keyframes blink {
+      0% {
+        ry: 2
+
+      }
+      50% {
+        ry: 5
+      }
+      100%{
+        ry: 15 
+      }
+    }
+    #smile{
+      animation: smileNow 2s ease-out infinite 2s;
+      transform-origin:unset;
+    }
+    @keyframes smileNow{
+        0%{
+            transform: scale(0.3)
+        }
+        50%{
+            transform: scale(0.5);
+                }
+        100%{
+            transform: scale(1);
+        }
+
+    }
+  </style>
   <body>
     <svg
-      version="1.1"
+      version="1.1
       baseProfile="full"
       width="500"
       height="500"
@@ -17,11 +53,11 @@
       <rect width="100%" height="100%" fill="grey" />
 
       <circle cx="225" cy="225" r="90" fill="pink" />
-      <ellipse cx="200" cy="210" rx="10" ry="15" />
-      <ellipse cx="250" cy="210" rx="10" ry="15" />
-      <circle cx="200" cy="210" r="10" fill="black" />
-      <circle cx="250" cy="210" r="10" fill="black" />
-      <path
+      <ellipse id="lEye" cx="200" cy="210" rx="10" ry="15" />
+      <ellipse id="rEye" cx="250" cy="210" rx="10" ry="15" />
+      <!-- <circle cx="200" cy="210" r="10" fill="black" />
+      <circle cx="250" cy="210" r="10" fill="black" /> -->
+      <path id="smile"
         d="M 195 250 q 25 30 60 0"
         stroke="black"
         stroke-width="5"
@@ -36,7 +72,7 @@
         stroke-linecap="round"
       /> -->
 
-      <path
+      <path 
         d="M 20,10
            A 20,20 0,0,1 50,30
            A 20,20 0,0,1 90,30
